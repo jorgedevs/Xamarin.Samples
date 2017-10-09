@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:RadioButtonSample" 
+    x:Class="RadioButtonSample.MainPage">
+
+    <ContentPage.Content>
+        <Grid Padding="20">
+    	    <StackLayout HorizontalOptions="Start">
+                <Label Text="Radio Button Sample" FontSize="Large" FontAttributes="Bold" />
+                <Label Text="Choose an option:" />
+
+                <Grid>
+                    <StackLayout Orientation="Horizontal">
+                        <Image Source="icon_radio_off">
+                            <Image.Triggers>
+                                <DataTrigger TargetType="Image"
+                                    Binding="{Binding Option}" Value="1">
+                                    <Setter Property="Source" Value="icon_radio_on" />
+                                </DataTrigger>
+                            </Image.Triggers>
+                        </Image>
+                        <Label Text="- Option 1" VerticalTextAlignment="Center">
+                            <Label.Triggers>
+                                <DataTrigger TargetType="Label"
+                                    Binding="{Binding Option}" Value="1">
+                                    <Setter Property="FontAttributes" Value="Bold" />
+                                </DataTrigger>
+                            </Label.Triggers>
+                        </Label>
+                    </StackLayout>
+                    <Button Command="{Binding OptionCommand}" CommandParameter="1" BackgroundColor="Transparent" />
+                </Grid>
+
+                <Grid>
+                    <StackLayout Orientation="Horizontal">
+                        <Image Source="icon_radio_off">
+                            <Image.Triggers>
+                                <DataTrigger TargetType="Image"
+                                    Binding="{Binding Option}" Value="2">
+                                    <Setter Property="Source" Value="icon_radio_on" />
+                                </DataTrigger>
+                            </Image.Triggers>
+                        </Image>                        
+                        <Label Text="- Option 2" VerticalTextAlignment="Center">
+                            <Label.Triggers>
+                                <DataTrigger TargetType="Label"
+                                    Binding="{Binding Option}" Value="2">
+                                    <Setter Property="FontAttributes" Value="Bold" />
+                                </DataTrigger>
+                            </Label.Triggers>
+                        </Label>
+                    </StackLayout>
+                    <Button Command="{Binding OptionCommand}" CommandParameter="2" BackgroundColor="Transparent" />
+                </Grid>
+
+                <Grid>
+                    <StackLayout Orientation="Horizontal">
+                        <Image Source="icon_radio_off">
+                            <Image.Triggers>
+                                <DataTrigger TargetType="Image"
+                                    Binding="{Binding Option}" Value="3">
+                                    <Setter Property="Source" Value="icon_radio_on" />
+                                </DataTrigger>
+                            </Image.Triggers>
+                        </Image>
+                        <Label Text="- Option 3" VerticalTextAlignment="Center">
+                            <Label.Triggers>
+                                <DataTrigger TargetType="Label"
+                                    Binding="{Binding Option}" Value="3">
+                                    <Setter Property="FontAttributes" Value="Bold" />
+                                </DataTrigger>
+                            </Label.Triggers>
+                        </Label>
+                    </StackLayout>
+                    <Button Command="{Binding OptionCommand}" CommandParameter="3" BackgroundColor="Transparent" />
+                </Grid>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
