@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:UnderlineEffectSample" 
+    xmlns:effect="clr-namespace:UnderlineEffectSample.Effects" 
+    x:Class="UnderlineEffectSample.MainPage">
+
+    <ContentPage.Content>
+        <Grid Padding="20">
+            <StackLayout HorizontalOptions="Start" Spacing="15">
+                <Label x:Name="lblTitle" Text="Underline Effect Sample" FontSize="Large" FontAttributes="Bold">
+                <Label.Effects>
+                        <effect:UnderlineEffect />
+                    </Label.Effects>
+                </Label>    
+                <Label Text="Tap the button to enable/disable it:" />
+                <Button x:Name="btnEffect" Text="Enable Effect" TextColor="White" FontAttributes="Bold" BackgroundColor="Teal" Margin="40,0,40,0" />
+                <Label x:Name="lblEffect" FontSize="Medium" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tempor enim a est mollis pulvinar. Morbi vitae sapien ac elit pretium mattis eget a libero. Aliquam vitae turpis in ipsum posuere accumsan. Morbi interdum lacus at egestas ornare. Duis interdum nec neque sit amet lacinia. Sed facilisis porttitor iaculis. Curabitur ac consectetur mauris." />
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
