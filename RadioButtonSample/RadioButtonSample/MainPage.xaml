@@ -6,13 +6,13 @@
     x:Class="RadioButtonSample.MainPage">
 
     <ContentPage.Content>
-        <Grid Padding="20">
+        <Grid Padding="30">
     	    <StackLayout HorizontalOptions="Start">
                 <Label Text="Radio Button Sample" FontSize="Large" FontAttributes="Bold" />
-                <Label Text="Choose an option:" />
+                <Label Text="Choose an option:" Margin="0,10,0,10" />
 
                 <Grid>
-                    <StackLayout Orientation="Horizontal">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                         <Image Source="icon_radio_off">
                             <Image.Triggers>
                                 <DataTrigger TargetType="Image"
@@ -21,7 +21,7 @@
                                 </DataTrigger>
                             </Image.Triggers>
                         </Image>
-                        <Label Text="- Option 1" VerticalTextAlignment="Center">
+                        <Label Text="- Option 1" HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center">
                             <Label.Triggers>
                                 <DataTrigger TargetType="Label"
                                     Binding="{Binding Option}" Value="1">
@@ -34,7 +34,7 @@
                 </Grid>
 
                 <Grid>
-                    <StackLayout Orientation="Horizontal">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                         <Image Source="icon_radio_off">
                             <Image.Triggers>
                                 <DataTrigger TargetType="Image"
@@ -43,7 +43,7 @@
                                 </DataTrigger>
                             </Image.Triggers>
                         </Image>                        
-                        <Label Text="- Option 2" VerticalTextAlignment="Center">
+                        <Label Text="- Option 2" HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center">
                             <Label.Triggers>
                                 <DataTrigger TargetType="Label"
                                     Binding="{Binding Option}" Value="2">
@@ -56,7 +56,7 @@
                 </Grid>
 
                 <Grid>
-                    <StackLayout Orientation="Horizontal">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                         <Image Source="icon_radio_off">
                             <Image.Triggers>
                                 <DataTrigger TargetType="Image"
@@ -65,7 +65,7 @@
                                 </DataTrigger>
                             </Image.Triggers>
                         </Image>
-                        <Label Text="- Option 3" VerticalTextAlignment="Center">
+                        <Label Text="- Option 3" HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center">
                             <Label.Triggers>
                                 <DataTrigger TargetType="Label"
                                     Binding="{Binding Option}" Value="3">
