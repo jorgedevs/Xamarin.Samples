@@ -6,6 +6,41 @@
     x:Class="ListViewHighlightSample.MainPage">
 
     <ContentPage.Content>
-	    <Label Text="Welcome to Xamarin Forms!" VerticalOptions="Center" HorizontalOptions="Center" />
+        <Grid Padding="30">
+            <StackLayout HorizontalOptions="Start">
+                <Label Text="ListView Highlight Sample" FontSize="Large" FontAttributes="Bold" />
+                <Label Text="Tap on an item to visualize the custom highlight color on the list:" />
+
+                <ListView x:Name="listView" ItemsSource="{Binding PersonList}" HasUnevenRows="true" BackgroundColor="Transparent"
+                    SeparatorVisibility="None">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid Margin="0,1,0,1" Padding="15">
+                                    <Grid.Triggers>
+                                        <DataTrigger TargetType="Grid" Binding="{Binding IsSelected}" Value="true">
+                                            <Setter Property="BackgroundColor" Value="#FF7400" />
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="Grid" Binding="{Binding IsSelected}" Value="false">
+                                            <Setter Property="BackgroundColor" Value="Teal" />
+                                        </DataTrigger>
+                                    </Grid.Triggers>
+                                    <Label Text="{Binding Name}" TextColor="White" VerticalOptions="Center">
+                                        <Label.Triggers>
+                                            <DataTrigger TargetType="Label" Binding="{Binding IsSelected}" Value="true">
+                                                <Setter Property="FontAttributes" Value="Bold" />
+                                            </DataTrigger>
+                                            <DataTrigger TargetType="Label" Binding="{Binding IsSelected}" Value="false">
+                                                <Setter Property="FontAttributes" Value="None" />
+                                            </DataTrigger>
+                                        </Label.Triggers>
+                                    </Label>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
