@@ -5,10 +5,10 @@
     x:Class="TableSortSample.MainPage">
     
 	<ContentPage.Content>
-        <Grid Padding="20">
+        <Grid Padding="30">
             <StackLayout HorizontalOptions="Start">
                 <Label Text="Table Sort Sample" FontSize="Large" FontAttributes="Bold" />
-                <Label Text="Tap on a header to sort the list:" />
+                <Label Text="Tap on a header to sort the list:" Margin="0,10,0,10" />
 
                 <Grid BackgroundColor="#DDDDDD" Padding="5,0,5,0">
                     <Grid.ColumnDefinitions>
@@ -33,7 +33,7 @@
                             </DataTrigger>
                         </Image.Triggers>
                     </Image>
-                    <Label  Grid.Column="1" Text="First Name" FontSize="Small" VerticalOptions="Center" />
+                    <Label  Grid.Column="1" Text="First Name" FontSize="Small" FontAttributes="Bold" VerticalOptions="Center" />
                     <Button Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="Transparent" 
                         Command="{Binding SortCommand}" CommandParameter="firstName" />
 
@@ -50,7 +50,7 @@
                             </DataTrigger>
                         </Image.Triggers>
                     </Image>
-                    <Label  Grid.Column="3" Text="Last Name" FontSize="Small" VerticalOptions="Center" />
+                    <Label  Grid.Column="3" Text="Last Name" FontSize="Small" FontAttributes="Bold" VerticalOptions="Center" />
                     <Button Grid.Column="2" Grid.ColumnSpan="2" BackgroundColor="Transparent" 
                         Command="{Binding SortCommand}" CommandParameter="lastName" />
 
@@ -67,7 +67,7 @@
                             </DataTrigger>
                         </Image.Triggers>
                     </Image>
-                    <Label  Grid.Column="5" Text="Age" FontSize="Small" VerticalOptions="Center" />
+                    <Label  Grid.Column="5" Text="Age" FontSize="Small" FontAttributes="Bold" VerticalOptions="Center" />
                     <Button Grid.Column="4" Grid.ColumnSpan="2" BackgroundColor="Transparent"
                         Command="{Binding SortCommand}" CommandParameter="age" />
                 </Grid>
@@ -77,7 +77,7 @@
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
-                                <Grid Padding="0,0,0,20">
+                                <Grid Padding="0,15,0,15">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="0.25*" />
                                         <ColumnDefinition Width="2*" />
@@ -87,9 +87,9 @@
                                         <ColumnDefinition Width="*" />
                                     </Grid.ColumnDefinitions>
 
-                                    <Label Grid.Column="1" Text="{Binding FirstName}" FontSize="Small" VerticalOptions="Start" />
-                                    <Label Grid.Column="3" Text="{Binding LastName}"  FontSize="Small" VerticalOptions="Start" />
-                                    <Label Grid.Column="5" Text="{Binding Age}"       FontSize="Small" VerticalOptions="Start" />
+                                    <Label Grid.Column="1" Text="{Binding FirstName}" FontSize="Small" VerticalOptions="Center" />
+                                    <Label Grid.Column="3" Text="{Binding LastName}"  FontSize="Small" VerticalOptions="Center" />
+                                    <Label Grid.Column="5" Text="{Binding Age}"       FontSize="Small" VerticalOptions="Center" />
                                 </Grid>
                             </ViewCell>
                         </DataTemplate>
