@@ -9,7 +9,7 @@
         <Grid Padding="30">
             <StackLayout HorizontalOptions="Start">
                 <Label Text="ListView Highlight Sample" FontSize="Large" FontAttributes="Bold" />
-                <Label Text="Tap on an item to visualize the custom highlight color on the list:" />
+                <Label Text="Tap on an item to visualize the custom highlight color on the list:" Margin="0,10,0,10" />
 
                 <ListView x:Name="listView" ItemsSource="{Binding PersonList}" HasUnevenRows="true" BackgroundColor="Transparent"
                     SeparatorVisibility="None">
