@@ -19,10 +19,10 @@
                                 <Grid Margin="0,1,0,1" Padding="15">
                                     <Grid.Triggers>
                                         <DataTrigger TargetType="Grid" Binding="{Binding IsSelected}" Value="true">
-                                            <Setter Property="BackgroundColor" Value="#FF7400" />
+                                            <Setter Property="BackgroundColor" Value="#FFBE00" />
                                         </DataTrigger>
                                         <DataTrigger TargetType="Grid" Binding="{Binding IsSelected}" Value="false">
-                                            <Setter Property="BackgroundColor" Value="Teal" />
+                                            <Setter Property="BackgroundColor" Value="#1A1EB2" />
                                         </DataTrigger>
                                     </Grid.Triggers>
                                     <Label Text="{Binding Name}" TextColor="White" VerticalOptions="Center">
