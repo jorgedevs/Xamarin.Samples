@@ -10,91 +10,93 @@
                 <Label Text="Table Sort Sample" FontSize="Large" FontAttributes="Bold" />
                 <Label Text="Tap on a header to sort the list:" Margin="0,10,0,10" />
 
-                <Grid BackgroundColor="#DDDDDD" Padding="5,0,5,0">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="0.25*" />
-                        <ColumnDefinition Width="2*" />
-                        <ColumnDefinition Width="0.25*" />
-                        <ColumnDefinition Width="2*" />
-                        <ColumnDefinition Width="0.25*" />
-                        <ColumnDefinition Width="*" />
-                    </Grid.ColumnDefinitions>
+                <StackLayout Spacing="0">
+                    <Grid BackgroundColor="#080B74" Padding="5,0,5,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.25*" />
+                            <ColumnDefinition Width="2*" />
+                            <ColumnDefinition Width="0.25*" />
+                            <ColumnDefinition Width="2*" />
+                            <ColumnDefinition Width="0.25*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
 
-                    <Image  Grid.Column="0" Source="icon_sort_arrow" Aspect="AspectFit">
-                        <Image.Triggers>
-                            <DataTrigger TargetType="Image" Binding="{Binding FirstNameHeader}" Value="-1">
-                                <Setter Property="Source" Value="icon_sort_arrow" />
-                            </DataTrigger>
-                            <DataTrigger TargetType="Image" Binding="{Binding FirstNameHeader}" Value="1">
-                                <Setter Property="Source" Value="icon_sort_arrow_up" />
-                            </DataTrigger>
-                            <DataTrigger TargetType="Image" Binding="{Binding FirstNameHeader}" Value="2">
-                                <Setter Property="Source" Value="icon_sort_arrow_down" />
-                            </DataTrigger>
-                        </Image.Triggers>
-                    </Image>
-                    <Label  Grid.Column="1" Text="First Name" FontSize="Small" FontAttributes="Bold" VerticalOptions="Center" />
-                    <Button Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="Transparent" 
-                        Command="{Binding SortCommand}" CommandParameter="firstName" />
+                        <Image  Grid.Column="0" Source="icon_sort_arrow" Aspect="AspectFit">
+                            <Image.Triggers>
+                                <DataTrigger TargetType="Image" Binding="{Binding FirstNameHeader}" Value="-1">
+                                    <Setter Property="Source" Value="icon_sort_arrow" />
+                                </DataTrigger>
+                                <DataTrigger TargetType="Image" Binding="{Binding FirstNameHeader}" Value="1">
+                                    <Setter Property="Source" Value="icon_sort_arrow_up" />
+                                </DataTrigger>
+                                <DataTrigger TargetType="Image" Binding="{Binding FirstNameHeader}" Value="2">
+                                    <Setter Property="Source" Value="icon_sort_arrow_down" />
+                                </DataTrigger>
+                            </Image.Triggers>
+                        </Image>
+                        <Label  Grid.Column="1" Text="First Name" TextColor="White" FontSize="Small" FontAttributes="Bold" VerticalOptions="Center" />
+                        <Button Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="Transparent" 
+                            Command="{Binding SortCommand}" CommandParameter="firstName" />
 
-                    <Image  Grid.Column="2" Source="icon_sort_arrow" Aspect="AspectFit">
-                        <Image.Triggers>
-                            <DataTrigger TargetType="Image" Binding="{Binding LastNameHeader}" Value="-1">
-                                <Setter Property="Source" Value="icon_sort_arrow" />
-                            </DataTrigger>
-                            <DataTrigger TargetType="Image" Binding="{Binding LastNameHeader}" Value="1">
-                                <Setter Property="Source" Value="icon_sort_arrow_up" />
-                            </DataTrigger>
-                            <DataTrigger TargetType="Image" Binding="{Binding LastNameHeader}" Value="2">
-                                <Setter Property="Source" Value="icon_sort_arrow_down" />
-                            </DataTrigger>
-                        </Image.Triggers>
-                    </Image>
-                    <Label  Grid.Column="3" Text="Last Name" FontSize="Small" FontAttributes="Bold" VerticalOptions="Center" />
-                    <Button Grid.Column="2" Grid.ColumnSpan="2" BackgroundColor="Transparent" 
-                        Command="{Binding SortCommand}" CommandParameter="lastName" />
+                        <Image  Grid.Column="2" Source="icon_sort_arrow" Aspect="AspectFit">
+                            <Image.Triggers>
+                                <DataTrigger TargetType="Image" Binding="{Binding LastNameHeader}" Value="-1">
+                                    <Setter Property="Source" Value="icon_sort_arrow" />
+                                </DataTrigger>
+                                <DataTrigger TargetType="Image" Binding="{Binding LastNameHeader}" Value="1">
+                                    <Setter Property="Source" Value="icon_sort_arrow_up" />
+                                </DataTrigger>
+                                <DataTrigger TargetType="Image" Binding="{Binding LastNameHeader}" Value="2">
+                                    <Setter Property="Source" Value="icon_sort_arrow_down" />
+                                </DataTrigger>
+                            </Image.Triggers>
+                        </Image>
+                        <Label  Grid.Column="3" Text="Last Name" TextColor="White" FontSize="Small" FontAttributes="Bold" VerticalOptions="Center" />
+                        <Button Grid.Column="2" Grid.ColumnSpan="2" BackgroundColor="Transparent" 
+                            Command="{Binding SortCommand}" CommandParameter="lastName" />
 
-                    <Image  Grid.Column="4" Source="icon_sort_arrow" Aspect="AspectFit">
-                        <Image.Triggers>
-                            <DataTrigger TargetType="Image" Binding="{Binding AgeHeader}" Value="-1">
-                                <Setter Property="Source" Value="icon_sort_arrow" />
-                            </DataTrigger>
-                            <DataTrigger TargetType="Image" Binding="{Binding AgeHeader}" Value="1">
-                                <Setter Property="Source" Value="icon_sort_arrow_up" />
-                            </DataTrigger>
-                            <DataTrigger TargetType="Image" Binding="{Binding AgeHeader}" Value="2">
-                                <Setter Property="Source" Value="icon_sort_arrow_down" />
-                            </DataTrigger>
-                        </Image.Triggers>
-                    </Image>
-                    <Label  Grid.Column="5" Text="Age" FontSize="Small" FontAttributes="Bold" VerticalOptions="Center" />
-                    <Button Grid.Column="4" Grid.ColumnSpan="2" BackgroundColor="Transparent"
-                        Command="{Binding SortCommand}" CommandParameter="age" />
-                </Grid>
+                        <Image  Grid.Column="4" Source="icon_sort_arrow" Aspect="AspectFit">
+                            <Image.Triggers>
+                                <DataTrigger TargetType="Image" Binding="{Binding AgeHeader}" Value="-1">
+                                    <Setter Property="Source" Value="icon_sort_arrow" />
+                                </DataTrigger>
+                                <DataTrigger TargetType="Image" Binding="{Binding AgeHeader}" Value="1">
+                                    <Setter Property="Source" Value="icon_sort_arrow_up" />
+                                </DataTrigger>
+                                <DataTrigger TargetType="Image" Binding="{Binding AgeHeader}" Value="2">
+                                    <Setter Property="Source" Value="icon_sort_arrow_down" />
+                                </DataTrigger>
+                            </Image.Triggers>
+                        </Image>
+                        <Label  Grid.Column="5" Text="Age" TextColor="White" FontSize="Small" FontAttributes="Bold" VerticalOptions="Center" />
+                        <Button Grid.Column="4" Grid.ColumnSpan="2" BackgroundColor="Transparent"
+                            Command="{Binding SortCommand}" CommandParameter="age" />
+                    </Grid>
 
-                <ListView ItemsSource="{Binding PersonList}" BackgroundColor="Transparent" 
-                    SeparatorVisibility="None" HasUnevenRows="true">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <ViewCell>
-                                <Grid Padding="0,15,0,15">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="0.25*" />
-                                        <ColumnDefinition Width="2*" />
-                                        <ColumnDefinition Width="0.25*" />
-                                        <ColumnDefinition Width="2*" />
-                                        <ColumnDefinition Width="0.25*" />
-                                        <ColumnDefinition Width="*" />
-                                    </Grid.ColumnDefinitions>
+                    <ListView ItemsSource="{Binding PersonList}" BackgroundColor="Transparent" 
+                        SeparatorVisibility="None" HasUnevenRows="true">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Grid BackgroundColor="#1A1EB2" Padding="0,15,0,15" Margin="0,1,0,0" >
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="0.25*" />
+                                            <ColumnDefinition Width="2*" />
+                                            <ColumnDefinition Width="0.25*" />
+                                            <ColumnDefinition Width="2*" />
+                                            <ColumnDefinition Width="0.25*" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
 
-                                    <Label Grid.Column="1" Text="{Binding FirstName}" FontSize="Small" VerticalOptions="Center" />
-                                    <Label Grid.Column="3" Text="{Binding LastName}"  FontSize="Small" VerticalOptions="Center" />
-                                    <Label Grid.Column="5" Text="{Binding Age}"       FontSize="Small" VerticalOptions="Center" />
-                                </Grid>
-                            </ViewCell>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
+                                        <Label Grid.Column="1" Text="{Binding FirstName}" TextColor="White" FontSize="Small" VerticalOptions="Center" />
+                                        <Label Grid.Column="3" Text="{Binding LastName}"  TextColor="White" FontSize="Small" VerticalOptions="Center" />
+                                        <Label Grid.Column="5" Text="{Binding Age}"       TextColor="White" FontSize="Small" VerticalOptions="Center" />
+                                    </Grid>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
             </StackLayout>
         </Grid>
 	</ContentPage.Content>
