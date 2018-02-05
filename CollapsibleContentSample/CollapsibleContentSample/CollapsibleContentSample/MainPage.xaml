@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:CollapsibleContentSample"
+    x:Class="CollapsibleContentSample.MainPage">
+
+    <ContentPage.Content>
+        <Grid Padding="15,25,15,15" BackgroundColor="White">
+            <StackLayout HorizontalOptions="Start">
+                <Label Text="Collapsible Sections Sample" FontSize="Large" TextColor="Black" FontAttributes="Bold" />
+                <Label Text="Tap on an item to visualize the custom highlight color on the list:" TextColor="Black"  Margin="0,10,0,10" />
+
+                <ScrollView>
+                    <StackLayout BackgroundColor="White">
+                        <local:SectionHeaderView HeaderTitle="General Information">
+                            <local:SectionHeaderView.ContentPart>
+                                <local:ContentGeneralInfoView />
+                            </local:SectionHeaderView.ContentPart>
+                        </local:SectionHeaderView>
+
+                        <local:SectionHeaderView HeaderTitle="Contact Information">
+                            <local:SectionHeaderView.ContentPart>
+                                <local:ContentContactInfoView />
+                            </local:SectionHeaderView.ContentPart>
+                        </local:SectionHeaderView>
+
+                        <local:SectionHeaderView HeaderTitle="Additional Information">
+                            <local:SectionHeaderView.ContentPart>
+                                <local:ContentMoreView />
+                            </local:SectionHeaderView.ContentPart>
+                        </local:SectionHeaderView>
+                    </StackLayout>
+                </ScrollView>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

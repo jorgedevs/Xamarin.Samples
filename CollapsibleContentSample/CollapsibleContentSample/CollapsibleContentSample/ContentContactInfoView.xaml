@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="CollapsibleContentSample.ContentContactInfoView">
+    
+    <ContentView.Content>
+        <StackLayout>
+            <Label Text="Enter your email adress:" TextColor="Black" />
+            <Entry Placeholder="john.doe@email.com" Style="{StaticResource EntryStyle}" />
+
+            <Label Text="Enter your phone number:" TextColor="Black" />
+            <Entry Placeholder="555-555-5555" Style="{StaticResource EntryStyle}" />
+
+            <Label Text="Enter your home adress:" TextColor="Black" />
+            <Entry Placeholder="555-5555 One Street" Style="{StaticResource EntryStyle}" />
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>
