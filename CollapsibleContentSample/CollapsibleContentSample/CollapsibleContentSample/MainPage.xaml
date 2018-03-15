@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage 
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -9,7 +9,7 @@
         <Grid Padding="15,25,15,15" BackgroundColor="White">
             <StackLayout HorizontalOptions="Start">
                 <Label Text="Collapsible Sections Sample" FontSize="Large" TextColor="Black" FontAttributes="Bold" />
-                <Label Text="Tap on an item to visualize the custom highlight color on the list:" TextColor="Black"  Margin="0,10,0,10" />
+                <Label Text="Tap on the header buttons to open/close form sections." TextColor="Black"  Margin="0,10,0,10" />
 
                 <ScrollView>
                     <StackLayout BackgroundColor="White">
