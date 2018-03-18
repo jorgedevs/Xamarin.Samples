@@ -8,6 +8,8 @@ A collection of Xamarin samples that I put together based on real-world situatio
 
 # Listview Highlight Sample
 
+You can follow this [guide](https://jorgearamirez.wordpress.com/2018/03/17/customize-selected-cell-in-a-listview/) in my blog to make this sample.
+
 ![alt text](https://github.com/iruel865/Jorge-Xamarin-Samples/blob/master/AppSampleScreenshots/ListView%20Highlight%20Sample.png)
 
 # Radio Button Sample
