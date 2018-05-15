@@ -86,9 +86,9 @@ namespace RgbLedAppSample
                     await ConnectAsync();
             });
 
-            //IsBusy = true;
-            //ShowConfig = true;
-            //Status = "Enter IP Address:";
+            IsBusy = true;
+            ShowConfig = true;
+            Status = "Enter IP Address:";
         }
 
         async Task ConnectAsync()
@@ -100,6 +100,27 @@ namespace RgbLedAppSample
             if (App.IsConnected)
             {
                 IsBusy = false;
+                var status = await apiHelper.CheckStatus();
+
+                IsOn = IsStartBlink = IsStartPulse = IsStartRunningColors = false;
+                switch (status)
+                {
+                    case "on":
+                        IsOn = true;
+                        break;
+
+                    case "blink":
+                        IsStartBlink = true;
+                        break;
+
+                    case "pulse":
+                        IsStartPulse = true;
+                        break;
+
+                    case "runningcolors":
+                        IsStartRunningColors = true;
+                        break;
+                }
             }
             else
             {
